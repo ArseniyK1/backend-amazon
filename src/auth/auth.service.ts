@@ -35,6 +35,7 @@ export class AuthService {
   }
 
   async register(dto: AuthDTO) {
+    const q = await this.prisma.user;
     const oldUser = await this.prisma.user.findUnique({
       where: {
         email: dto.email,
