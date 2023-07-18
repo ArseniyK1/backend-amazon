@@ -75,13 +75,14 @@ export class UserService {
       },
       data: {
         favorites: {
-          [isExists ? 'disconnest' : 'connect']: {
+          [isExists ? 'disconnect' : 'connect']: {
             id: productId,
           },
         },
       },
     });
 
-    return 'Success';
+    return { message: 'Success' };
   }
 }
+//
